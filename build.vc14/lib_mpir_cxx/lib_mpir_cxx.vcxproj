@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Release|Win32">
@@ -74,7 +74,6 @@
       <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_LIB;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-
     <PostBuildEvent>
       <Command>cd ..\..\build.vc
 postbuild "$(TargetPath)" 14
@@ -86,7 +85,6 @@ postbuild "$(TargetPath)" 14
       <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WIN32;_LIB;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-
     <PostBuildEvent>
       <Command>cd ..\..\build.vc
 postbuild "$(TargetPath)" 14
@@ -98,7 +96,6 @@ postbuild "$(TargetPath)" 14
       <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_LIB;HAVE_CONFIG_H;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-
     <PostBuildEvent>
       <Command>cd ..\..\build.vc
 postbuild "$(TargetPath)" 14
@@ -110,7 +107,6 @@ postbuild "$(TargetPath)" 14
       <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WIN32;_LIB;HAVE_CONFIG_H;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-
     <PostBuildEvent>
       <Command>cd ..\..\build.vc
 postbuild "$(TargetPath)" 14
@@ -127,6 +123,7 @@ postbuild "$(TargetPath)" 14
     <ClInclude Include="..\..\mpir.h" />
     <ClInclude Include="..\..\gmp-mparam.h" />
     <ClInclude Include="..\..\mpirxx.h" />
+    <ClInclude Include="..\..\mpz_w.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\cxx\dummy.cc" />
@@ -135,6 +132,7 @@ postbuild "$(TargetPath)" 14
     <ClCompile Include="..\..\cxx\ismpq.cc" />
     <ClCompile Include="..\..\cxx\ismpz.cc" />
     <ClCompile Include="..\..\cxx\ismpznw.cc" />
+    <ClCompile Include="..\..\cxx\mpz_w.cpp" />
     <ClCompile Include="..\..\cxx\osdoprnti.cc" />
     <ClCompile Include="..\..\cxx\osfuns.cc" />
     <ClCompile Include="..\..\cxx\osmpf.cc" />
@@ -144,7 +142,7 @@ postbuild "$(TargetPath)" 14
   <ItemGroup>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-<ItemGroup>
+  <ItemGroup>
     <None Include="..\..\gmp-h.in" />
-    </ItemGroup>
+  </ItemGroup>
 </Project>
