@@ -26,11 +26,10 @@ mpz_w mpz_w::operator%(const mpz_w& rhs)
 	return result;
 }
 
-mpz_w & mpz_w::operator/=(const mpz_w& rhs)
+mpz_w& mpz_w::operator/=(const mpz_w& rhs)
 {
-	mpz_w result;
-	mpz_fdiv_q(result.val, val, rhs.val);
-	return result;
+	mpz_fdiv_q(val, val, rhs.val);
+	return *this;
 }
 
 mpz_w & mpz_w::operator+=(const mpz_w& rhs)
